@@ -29,8 +29,8 @@ public class Ayudante extends SQLiteOpenHelper {
                 Contrato.TablaBar.NOMBRE+" text, "+
                 Contrato.TablaBar.DIRECCION+" text, "+
                 Contrato.TablaBar.COMENTARIO+" text, "+
-                Contrato.TablaBar.ALTITUD+" text, "+
-                Contrato.TablaBar.LONGITUD+" text)";
+                Contrato.TablaBar.ALTITUD+" integer, "+
+                Contrato.TablaBar.LONGITUD+" integer)";
         db.execSQL(sql);
 
     }

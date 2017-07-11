@@ -1,4 +1,4 @@
-package com.arp.baresypubs.adaptador;
+package com.arp.baresypubs;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -9,7 +9,7 @@ import android.widget.CursorAdapter;
 import android.widget.TextView;
 
 /**
- * Created by Alex on 10/07/2017.
+ * Created by Alex on 11/07/2017.
  */
 
 public class Adaptador extends CursorAdapter {
@@ -20,7 +20,6 @@ public class Adaptador extends CursorAdapter {
     public Adaptador(Context context, Cursor c) {
         super(context, c,true);
     }
-
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
@@ -33,6 +32,7 @@ public class Adaptador extends CursorAdapter {
     public void bindView(View view, Context context, Cursor cursor) {
         TextView tvBar;
         tvBar=(TextView)v.findViewById(R.id.tvBar);
+        cursor.moveToFirst();
         tvBar.setText(cursor.getString(cursor.getColumnIndex("nombre")));
     }
 
